@@ -1,0 +1,379 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(186, 186, 186, 0.7);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(142, 142, 142);
+    border-radius: 200rem;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #F4F0E9;
+    margin: auto;
+    min-height: 100vh;
+    background-size: contain;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-weight: 300;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.search {
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+
+.textSearch {
+    background-color: #F4F0E9;
+    width: 500px;
+    height: 40px;
+    padding-left: 10px;
+    border: 0px;
+    font-size: 16px;
+}
+
+.inf {
+    margin: 30px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inf2 {
+    width: 100%;
+    border-right: 1px solid #bfbdbd;
+}
+
+    .inf2 .box0 {
+        display: flex;
+    }
+
+.box0 .box {
+    margin: 0 20px 20px 0;
+}
+
+    .box0 .box .txt {
+        margin-top: 10px;
+        background-color: #D9D9D9;
+        border-radius: 20px;
+        border: 0px;
+        height: 25px;
+        width: 200px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .box0 .box p {
+        font-size: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+.inf .btn {
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+    .inf .btn .txtBtn {
+        height: 30px;
+        text-align: center;
+        width: 100px;
+        background: #000000;
+        color: white;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        cursor:pointer;
+    }
+
+.aBtn {
+    height: 30px;
+    text-align: center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width: 100px;
+    background: #000000;
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    cursor:pointer;
+    font-size:13px;
+}
+/**********CHỈNH BẢNG*************/
+#form1 .grid0 {
+    display:block;
+    box-sizing: border-box;
+    max-width:800px;
+    max-height:300px;
+}
+
+    #form1 .grid0 .grid {
+        
+        border-radius: 20px;
+        background: white;
+        display: flex;
+        width: fit-content;
+        padding: 20px 20px;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 20px;
+    }
+
+        #form1 .grid0 .grid .custom-gridview {
+           
+            border-style: none;
+            border-color: inherit;
+            border-width: 0px;
+            border-radius: 20px;
+            background-color: white;
+            color: #993333;
+            text-align: left;
+        }
+
+.custom-gridview tbody tr td {
+    background-color: white;
+    color: #333;
+    border: 0px;
+    border-bottom: 1px solid rgba(186, 186, 186, 0.7);
+    font-size: 13px;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.custom-gridview th {
+    background: #EDEDED;
+    color: black;
+    font-weight: bold;
+    border: 0px;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+    .custom-gridview th:first-child {
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+    }
+
+    /* Css cho tiêu đề cột cuối cùng */
+    .custom-gridview th:last-child {
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+/* Css cho btn */
+.custom-gridview .choose-button {
+    border: 0px;
+}
+
+.display_flex{
+    display:flex;
+
+}
+
+.validation-messages {
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa các thông báo lỗi */
+}
+
+
+/*popUp form*/
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    -webkit-animation-name: fadeIn;
+    /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s;
+}
+
+.container {
+    display: flex;
+    /* Sử dụng flexbox */
+    justify-content: center;
+    /* Căn giữa theo chiều ngang */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+}
+
+/* Modal Content */
+.modal-content {
+    margin: 0;
+    position: fixed;
+    top: 70px;
+    border-radius: 20px;
+    background-color: #fefefe;
+    width: 620px;
+    height: 600px;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.modal-header {
+    border-radius: 20px 20px 0px 0px;
+    padding: 2px 16px;
+    background-color: #343434;
+    color: white;
+    text-align: center;
+}
+
+.modal-header h2{
+    margin: 18px 0px;
+}
+
+.modal-body {
+    padding: 5px 65px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    /* background-color: #5cb85c; */
+    color: white;
+    text-align: center;
+    /* display: flex;
+    justify-content: space-evenly;
+    align-content: center; */
+}
+
+.btnF {
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 120px;
+    background: #343434;
+    border-radius: 15px;
+    color: white;
+    padding: 8px 10px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    word-wrap: break-word;
+    transition: 0.3s;
+}
+
+    .btnF:hover {
+        background-color: #545454;
+    }
+
+#formMS input,select {
+    margin-top: 8px;
+    margin-bottom: 15px;
+    height: 25px;
+    background: #D9D9D9;
+    border-radius: 20px;
+    border: none;
+    padding-left: 8px;
+    font-weight: 400;
+    width: 150px;
+}
+
+#formMS {
+    margin-top: 15px;
+    border:none;
+}
+
+#formMS select.longInput {
+    width: 250px;
+}
+
+label {
+    letter-spacing: 1px;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 100px;
+        opacity: 1
+    }
+}
+
+@keyframes slideIn {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 100px;
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}

@@ -1,0 +1,91 @@
+﻿body {
+    background-color: floralwhite;
+}
+
+.id {
+    margin: 0;
+    margin: auto;
+    width: 200px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.id1 {
+    margin-left: 430px;
+}
+
+.id2 {
+    margin-left: 730px;
+    margin-top: -134px;
+    width: 465px;
+}
+
+.id3 {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+.id4 {
+    border-radius: 10px;
+}
+
+/**********CHỈNH BẢNG*************/
+#form1 .grid0 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    #form1 .grid0 .grid {
+        border-radius: 20px;
+        background: white;
+        display: flex;
+        width: fit-content;
+        padding: 20px 20px;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 50px;
+    }
+
+        #form1 .grid0 .grid .custom-gridview {
+            width: 100%;
+            border-radius: 20px;
+            background-color: white;
+            border: 0px;
+        }
+
+.custom-gridview tbody tr td {
+    background-color: white;
+    color: #333;
+    border: 0px;
+    border-bottom: 1px solid rgba(186, 186, 186, 0.7);
+    font-size: 13px;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.custom-gridview th {
+    background: #EDEDED;
+    color: black;
+    font-weight: bold;
+    border: 0px;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+    .custom-gridview th:first-child {
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+    }
+
+    /* Css cho tiêu đề cột cuối cùng */
+    .custom-gridview th:last-child {
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+/* Css cho btn */
+.custom-gridview .choose-button {
+    border: 0px;
+}

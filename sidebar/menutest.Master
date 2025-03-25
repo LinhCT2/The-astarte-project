@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="menutest.master.cs" Inherits="Library_Management_dev_prc_linh.sidebar.menutest" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <style>
+             a{
+                text-decoration: none;
+                color: red;
+            }
+        </style>
+        <script>
+            const menuItems = document.querySelectorAll('nav.sidebar ul li');
+
+            menuItems.forEach(menuItem => {
+                menuItem.addEventListener('click', function () {
+                    // Change background color (same as before)
+                    document.body.style.backgroundColor = '#F0F0F0';
+
+                    // Get the ID of the clicked menu item
+                    const clickedMenuItemId = this.id;
+
+                    // Change text color based on ID
+                    switch (clickedMenuItemId) {
+                        case 'home':
+                            this.style.color = 'black'; // Set text color to black for 'home'
+                            break;
+                        default:
+                            this.style.color = ''; // Reset text color to default for other links
+                    }
+
+                    // Navigate to the corresponding page
+                    switch (clickedMenuItemId) {
+                        case 'home':
+                            window.location.href = 'Home.aspx';
+                            break;
+                        case 'books':
+                            window.location.href = 'Books.aspx';
+                            break;
+                        // ... Add other cases
+                        default:
+                            break;
+                    }
+                });
+            });
+
+        </script>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+        <nav class="sidebar">
+        <ul>
+            <li id="home"><a style="text-decoration:none;" href="homePT.aspx">Home</a></li>
+            <li id="books"><a style="text-decoration:none;" href="booksPT.aspx">Books</a></li>
+            <li id="authors"><a href="#">Authors</a></li>
+            <li id="members"><a href="#">Members</a></li>
+            <li id="settings"><a href="#">Settings</a></li>
+        </ul>
+        </nav>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

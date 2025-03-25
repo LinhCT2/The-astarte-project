@@ -1,0 +1,95 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(186, 186, 186, 0.7);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(142, 142, 142);
+    border-radius: 200rem;
+}
+
+body {
+    margin: auto;
+    min-height: 100vh;
+    background-size: contain;
+    overflow-x: hidden;
+}
+
+section {
+    display: flex;
+    /* justify-content: space-between; */
+    flex-direction: column;
+    font-family: "Inter", sans-serif;
+    border-right: 1px solid #aeaeae;
+    width: fit-content;
+    background-color: #F4F0E9;
+    height: 100vh;
+}
+
+    section .logo {
+        display: flex;
+        padding-top: 30px;
+        margin: 0 47px;
+    }
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.logo p {
+    font-weight: 300;
+    font-size: 18px;
+}
+
+section .menu {
+    height: 55px;
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    padding: 10px 60px;
+    /* background-color: #000; */
+}
+
+    section .menu:hover,
+    section .menu:hover a {
+        background-color: #343434;
+        transition: 0.3s;
+        color: #F4F0E9;
+    }
+
+.menu i {
+    font-size: 20px;
+    width: 55px;
+}
+
+.menu a {
+    color: #000;
+    font-size: 15px;
+    text-decoration: none
+}
+#b {
+    display: flex;
+width:100%;    
+}
+#b1{
+    width: 17%;
+}
+#b2 {
+    width:83%;
+    
+}
+

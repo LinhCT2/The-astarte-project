@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="siteMenu.master.cs" Inherits="Library_Management_dev_prc_linh.menu.siteMenu" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="menu1.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">        
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="b">
+        <section id="b1">
+            <div class="logo">
+                <%--<img src="Logo.png" alt="">--%>
+                <img src="../menu/images/Logo.png" />
+                <p>The Astate <br> Project</p>
+            </div>
+            <div style="width: auto;height: 30px;"></div>
+            <div class="menu" style="">
+                <i class="fa-solid fa-house"></i>
+                <a href="../menu/home.aspx">Home</a>
+            </div>
+            <div class="menu">
+                <i class="fa-solid fa-book"></i>
+                <a href="../menu/about.aspx">Books</a>
+            </div>
+            <div class="menu">
+                <i class="fa-solid fa-user"></i>
+                <a href="">Authors</a>
+            </div>
+            <div class="menu">
+                <i class="fa-solid fa-list"></i>
+                <a href="theloai.aspx">Genres</a>
+            </div>
+            <div class="menu">
+                <i class="fa-solid fa-calendar-days"></i>
+                <a href="">Publishers</a>
+            </div>
+            <div class="menu">
+                <i class="fa-solid fa-book-open-reader"></i>
+                <a href="../minh/readers.aspx">Readers</a>
+            </div>
+            <div class="menu">
+                <i class="fa-solid fa-ticket"></i>
+                <a href="../menu/borrows.aspx">Borrows</a>
+            </div>
+            <div class="menu">
+                <i class="fa-solid fa-chart-simple"></i>
+                <a href="">Statistic</a>
+            </div>
+        </section>
+        <section id="b2">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </section>
+    </div>
+    </form>
+</body>
+</html>
